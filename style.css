@@ -319,10 +319,11 @@ model-viewer {
     .viewer-column { order: 1; }
 }
  @media (max-width: 767px) {
-    model-viewer { height: 100%; width: 100%;}
+    model-viewer { height: 50%; width: 50%;}
     .planet-info-display h3 { font-size: 1.6em;}
     .planet-info-display .description { font-size: 0.95em;}
     .catalog-box h2 { font-size: 1.4em;}
     .catalog-items { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 12px; }
     .control-button, .nav-btn { padding: 10px 15px; font-size: 0.85em;}
+
 }
