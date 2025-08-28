@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorador Interativo de Planetas 3D</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Exo+2:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome (para ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Seu CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Scripts (Model Viewer e tsParticles ANTES do seu script.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js" defer></script>
+</head>
+<body>
+        <div class="viewer-column">
+            <!-- ===== ÚNICA INSTÂNCIA DO MODEL-VIEWER PRINCIPAL ===== -->
+            <model-viewer
+                id="mainModelViewer"
+                src="earth.glb"
+                ios-src="earth.usdz" /* Atualize se tiver USDZ */
+                alt="Modelo 3D do Planeta Terra"
+                auto-rotate
+                camera-controls
+                ar
+                shadow-intensity="1"
+                environment-image="neutral"
+                exposure="1"
+                camera-orbit="0deg 75deg 2.5m"
+                min-camera-orbit="auto auto 500m"
+                max-camera-orbit="auto auto 500m"
+            >
+            </model-viewer>
+
+            <!-- ===== ÚNICO CONJUNTO DE CONTROLES DO MODELO ===== -->
+           
+        </div>
+
+    <!-- MODAL PARA TELA CHEIA -->
+    <div id="fullscreen-modal" class="fullscreen-modal-overlay hidden">
+        <div id="fullscreen-model-container">
+            <!-- O model-viewer com id="mainModelViewer" será movido para cá pelo JavaScript -->
+        </div>
+        <button id="closeFullscreenBtn" class="close-fullscreen-btn"><i class="fas fa-times"></i></button>
+    </div>
+
+    <!-- Seu JavaScript -->
+    <script src="script.js" defer></script>
+</body>
+</html>
